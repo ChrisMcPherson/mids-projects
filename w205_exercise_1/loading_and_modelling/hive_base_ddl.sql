@@ -79,7 +79,7 @@ CREATE EXTERNAL TABLE IF NOT EXISTS hospitals
 	county string,
 	phone string,
 	hospital_type string,
-	ownerwhip string,
+	ownership string,
 	emergency_services string
 )
 ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'

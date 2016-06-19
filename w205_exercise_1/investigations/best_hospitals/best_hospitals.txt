@@ -1,0 +1,28 @@
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+| Hospital_id | Hospital_name                            | Hospital_type             | Emg_svc | Total_score | Average_score | Min_score | Max_score | Proc_cout |
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+| 370233      | PINNACLE SPECIALTY HOSPITAL              | Acute Care Hospitals      | 1       | 10167       | 98.70         | 0         | 10000     | 48        |
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+| 450797      | HOUSTON HOSPITAL FOR SPECIALIZED SURGERY | Acute Care Hospitals      | 0       | 10366       | 47.55         | 0         | 10000     | 48        |
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+| 370220      | ONECORE HEALTH                           | Acute Care Hospitals      | 1       | 10701       | 38.08         | 0         | 10000     | 48        |
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+| 171317      | EDWARDS COUNTY HOSPITAL                  | Critical Access Hospitals | 1       | 10232       | 28.82         | 0         | 10000     | 47        |
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+| 241375      | MINNESOTA VALLEY HEALTH CENTER           | Critical Access Hospitals | 1       | 10282       | 15.86         | 0         | 10000     | 47        |
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+| 450808      | NORTHWEST HILLS SURGICAL HOSPITAL        | Acute Care Hospitals      | 1       | 10978       | 14.91         | 0         | 10000     | 48        |
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+| 370225      | SUMMIT MEDICAL CENTER                    | Acute Care Hospitals      | 1       | 11348       | 10.73         | 0         | 10000     | 48        |
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+| 370201      | SURGICAL HOSPITAL OF OKLAHOMA            | Acute Care Hospitals      | 1       | 11043       | 9.94          | 0         | 10000     | 48        |
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+| 31303       | COCHISE REGIONAL HOSPITAL                | Critical Access Hospitals | 0       | 100         | 9.09          | 0         | 100       | 35        |
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+| 281331      | AVERA CREIGHTON HOSPITAL                 | Critical Access Hospitals | 1       | 100         | 9.09          | 0         | 100       | 47        |
++-------------+------------------------------------------+---------------------------+---------+-------------+---------------+-----------+-----------+-----------+
+
+The combination of the hospitals categorical data with the procedures effective care metrics enabled us to find the top 10 hospitals with the most effective care.
+The hospitals were ordered on average score (total score / total # of samples) as the number of samples varied widely and this transformation leveled the playing field. For example, there are hospitals with higher total scores than those that made it into the top 10 above. However, they were based on a much higher total sample count. Included are also additional metrics to help provide some context, such as the total number of procedures scored per hospital (Proc_count), minimum and maximum score per hospital (Min_score, Max_score), and the total score. One interesting finding are hospitals 9 and 10 in the ranking. Their total score is only 100, however they were scored favorably. I would argue that they should stay in the top 10 as any thresholds imposed would bias the ranking toward larger hospitals. Another solution would be to have separate top 10 lists that would segregate the hospitals into various sample size buckets.
+
+Also included in the table above are additional categorical data for each hospital, such as hospital type and whether or not they provided emergency services. These were included to explore whether or not the distribution of hospitals in the top 10 were over (or under) represented in these categories in comparison to the population of hospitals. There were not any significant deviations found.

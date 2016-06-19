@@ -1,0 +1,28 @@
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+| State | Total_score | Average_score | Min_score | Max_score | Procedure_count | Hospital_count |
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+| NH    | 530866      | 0.91          | 0         | 50000     | 1177            | 26             |
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+| MT    | 333752      | 0.91          | 0         | 50000     | 2311            | 58             |
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+| UT    | 840950      | 0.90          | 0         | 60000     | 2145            | 46             |
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+| WY    | 215965      | 0.89          | 0         | 30000     | 1176            | 28             |
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+| IA    | 1099490     | 0.88          | 0         | 60000     | 5154            | 118            |
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+| OK    | 1905859     | 0.87          | 0         | 60000     | 5933            | 127            |
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+| AK    | 257128      | 0.86          | 0         | 50000     | 869             | 21             |
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+| ME    | 580591      | 0.85          | 0         | 60000     | 1582            | 35             |
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+| ND    | 259787      | 0.84          | 0         | 50000     | 2064            | 45             |
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+| AR    | 1289016     | 0.83          | 0         | 60000     | 3408            | 77             |
++-------+-------------+---------------+-----------+-----------+-----------------+----------------+
+
+Just as how the best hospitals were measured, measuring the top 10 states on quality of care was based on an average score. The quality of care metric should not change whether we are measuring hospitals or states. If we should be interested in measuring states by a different metric, we would need to be explicit in explaining the differences and should consider using a different metric name. However, I did not believe this was necessary as the average score does a great job of leveling the playing field, even for states, as there is a large variation in the number of hospitals per state. The final column in the above table (Hospital_count) proves this point by providing a count of hospitals per state. It varies from a low of 26 in NH, to a high of 127 in OK. 
+
+A single filtering of the data had to be added to remove any US territories. In fact, Guam topped the list of top 10 states on quality of care before the filter was added. I believe this was necessary to keep a strict definition of what States were included (only the 50 recognized by the federal government).
+

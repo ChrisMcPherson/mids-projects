@@ -17,7 +17,7 @@ SELECT hospital_id,
 	county,
 	phone,
 	hospital_type,
-	ownerwhip,
+	ownership,
 	CASE 
 		WHEN emergency_services = 'No' THEN 0
 		ELSE 1
