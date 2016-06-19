@@ -90,3 +90,49 @@ WITH SERDEPROPERTIES (
 )
 STORED AS TEXTFILE
 LOCATION '/user/w205/hospital_compare/hospitals';
+
+CREATE EXTERNAL TABLE IF NOT EXISTS measures
+(	measure_name string,
+	measure_id string,
+	measure_st_qtr string,
+	measure_st_dt string,
+	measure_end_qtr string,
+	measure_end_dt string
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+ "separatorChar" = ",",
+ "quoteChar" = '"',
+ "escapeChar" = '\\'
+)
+STORED AS TEXTFILE
+LOCATION '/user/w205/hospital_compare/measures';
+
+CREATE EXTERNAL TABLE IF NOT EXISTS readmissions
+(	provider_id int,
+	hospital_name string,
+	address string,
+	city string,
+	state string,
+	zip string,
+	county string,
+	phone string,
+	measure_name string,
+	measure_id int,
+	comp_to_national string,
+	denominator int,
+	score int,
+	lower_estimate double,
+	higher_estimate double,
+	footnote string,
+	measure_st_dt string,
+	measure_end_dt string
+)
+ROW FORMAT SERDE 'org.apache.hadoop.hive.serde2.OpenCSVSerde'
+WITH SERDEPROPERTIES (
+ "separatorChar" = ",",
+ "quoteChar" = '"',
+ "escapeChar" = '\\'
+)
+STORED AS TEXTFILE
+LOCATION '/user/w205/hospital_compare/readmissions';
