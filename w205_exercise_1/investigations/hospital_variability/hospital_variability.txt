@@ -1,0 +1,27 @@
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+| Measure_name                                                                | Score_variance | Score_std_dev | Total_score | Hospital_count |
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+| Median Time to Transfer to Another Facility for Acute Coronary Intervention | 5.76           | 2.40          | 24845       | 4108           |
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+| Unfractionated heparin with dosages/platelet count monitoring               | 5.27           | 2.30          | 201762      | 4603           |
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+| ACEI or ARB for LVSD                                                        | 4.77           | 2.18          | 255863      | 4603           |
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+| Anticoagulation Therapy for Atrial Fibrillation/Flutter                     | 4.72           | 2.17          | 144281      | 4603           |
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+| Relievers for Inpatient Asthma                                              | 4.68           | 2.16          | 9598        | 102            |
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+| Aspirin prescribed at discharge                                             | 4.64           | 2.15          | 213920      | 4603           |
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+| Thrombolytic Therapy                                                        | 4.62           | 2.15          | 72452       | 4603           |
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+| Aspirin at Arrival                                                          | 4.56           | 2.13          | 201558      | 4108           |
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+| Systemic Corticosteroids for Inpatient Asthma                               | 4.54           | 2.13          | 9567        | 102            |
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+| Warfarin therapy discharge instructions                                     | 4.52           | 2.12          | 219128      | 4603           |
++-----------------------------------------------------------------------------+----------------+---------------+-------------+----------------+
+
+The table above identifies the top 10 procedures with the highest variation across hospitals. The first step to achieve these results was similar to the how we measured quality of score. However, this time we aggregated the average score at the procedure by hospital level. These results were then used to calculate the variance across all of the hospitals for each procedure. The results above also have included the standard deviation across procedures. This statistic is measuring the same phenomenon as variance but the results are measured in the same units as average score so it is a more intuitive measurement. 
+
+Also included in the results are the total score and hospital count. It is interesting that there were two procedures only reported by small number hospitals in comparison to the whole group. I suspect that these procedures are handled only by specialists and it is because of their infrequency that the variation across the hospitals that offer the procedure was high.

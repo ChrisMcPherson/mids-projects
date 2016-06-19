@@ -10,6 +10,6 @@ SELECT hos.state
 FROM hospitals_transformed AS hos
 INNER JOIN procedures_transformed AS proc ON hos.hospital_id = proc.hospital_id
 GROUP BY hos.state
-HAVING hos.state NOT IN ('GU','VI')
+HAVING hos.state NOT IN ('GU','VI','AS','MP','PR','VI')
 ORDER BY average_score DESC
 LIMIT 10;
