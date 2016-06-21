@@ -1,0 +1,9 @@
++-----------------------------------------------+--------------------------------------+
+| Procedure Variability and Survey Correlation  | Average Score and Survey Correlation |
++-----------------------------------------------+--------------------------------------+
+| 0.172                                         | 0.191                                |
++-----------------------------------------------+--------------------------------------+
+
+The results for both the correlation of average score and procedure variation with the survey results are in the table above. There is only a single pair of results due primarily to the fact that they survey data is provided at the hospital level (granularity). There is no mapping from survey responses to the procedures performed at each hospital. Because of this, each data set, survey data and hospital procedure variability and scores, had to be aggregated seperately to a granularity that they would match on (hospital_id). To calculate the correlation that they may share we had to measure change accross X, which in this case was the change accross the hospital dimension (the only matching dimension accross these data sets/tables). 
+
+The correlation results for both procedure variability and average score with survey responses were very close and were both showed a positive relationship. This means that an increase in procedure variability or average score is correlated with an increase in survey score. However, the strength of the correlation is weak. Typically a correlation of .3 is considered a weak correlation and these scores are significantly below that. I would say that the correlation is interesting, however it is not strong enough to make any conclusions on.
